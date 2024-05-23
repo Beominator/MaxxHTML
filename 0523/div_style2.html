@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div_style2</title>
+
+    <style type="text/css">
+        #top{
+            margin: 0 auto;   /* 가운데 정렬 */
+            width:800px;
+            background: purple;
+            padding:40px 80px 40px 40px;
+            box-sizing: border-box;
+        }
+        #item1{
+            background: brown;
+            height:100px;
+            margin-bottom:20px;
+        }
+        #item2{
+            background: green;
+            height:100px;
+            margin-bottom:20px;
+        }
+        #item4, #item5{ display:inline-block; /* 한줄에 두개 */
+        }
+        #item4{
+            width:200px;
+            height:100px;
+            background: yellow;
+        }
+        #item5{
+            width:460px;
+            height:100px;
+            margin-left:20px;
+            background: gray;
+        }
+        #bottom{
+            margin: 0 auto;
+            width:800px;
+            height:100px;
+            background: beige;
+            margin-top:10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="item1"></div>
+        <div id="item2"></div>
+        <div id="item3">
+            <span id="item4"></span><span id="item5"></span>
+            
+        </div>
+        
+    </div>
+
+    <div id="bottom"></div>
+
+</body>
+</html>
