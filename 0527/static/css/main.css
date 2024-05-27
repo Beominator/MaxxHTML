@@ -24,7 +24,7 @@ ul{
 }
 .top_text_box{
     text-align:right;
-    padding-right:50px;
+    padding-right:5px;
 }
 #top .top_text{
     display:inline-block;
@@ -119,3 +119,73 @@ ul{
 /* top:50%;
     transform: translateY(-50%); 정확히 가운데에 표시 */
 
+#content{
+    width:100%;
+    height:280px;
+    padding:20px;
+}
+.left_content{
+    float:left;
+    width:50%;
+}
+.left_content .notice .title{
+    line-height:40px;           /* 줄 간격 */
+}
+.right_content{
+    width:50%;
+    padding:10px;
+    float:left;
+}
+.event_top{
+    background:url(../image/event1.jpeg) no-repeat center;
+    background-size: cover;
+    height:105px;
+    border-radius: 10px;        /* 모서리 깎기 */
+    box-shadow: 3px 3px 5px #666;      /* inset : 안쪽그림자 */
+}
+.event_bottom{
+    background:url(../image/event2.jpeg) no-repeat center;
+    background-size:cover;
+    height:105px;
+    margin-top:10px;
+    border-radius: 10px;      
+    box-shadow: 3px 3px 5px #666; 
+}
+
+#footer{
+   
+    background: #3b414d;
+    color: #eee;
+   padding:20px;
+}
+.foot_menu{
+    height:30px;
+    font-size:13px;
+    
+}
+.foot_menu li{
+    float:left;
+    padding:0 20px;
+}
+
+/* #footer .foot_menu:nth-child(2){
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+} */
+
+.foot_menu li:nth-child(1){padding-left: 0;}
+.foot_menu li:nth-child(2){
+    border-left:2px solid #eee;
+    border-right:2px solid #eee;
+}
+.foot_menu li:nth-child(3){padding-right: 2px solid #eee;}
+
+
+.foot_text{
+    color:#bbb;
+    font-weight:800;
+}
+.foot_text p{
+    line-height:30px;
+   
+}
