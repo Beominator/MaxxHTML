@@ -80,10 +80,42 @@ ul{
     width:100%;
 }
 #slide .slide_image{
-    background:url(../image/slide2.jpeg) ;
+    /* background:url(../image/slide2.jpeg) ;
     background-repeat: no-repeat;
+    background-position: center; */
+    background:url(../image/slide2.jpeg) no-repeat center;
     background-size: cover;
-    background-position: center;
     height:350px;
 
 }
+#move{
+    position:relative;
+    box-sizing: border-box;
+}
+
+
+#slide{
+    width:100%;
+    position:relative;
+}
+.move_bt{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%); 
+    background: #eee;
+    padding:5px 5px 5px 5px;
+    font-size:25px;
+    opacity: 0.3;
+    cursor: pointer;
+
+}
+.left{
+    left:10px;
+}
+.right{
+    right:10px;
+}
+
+/* top:50%;
+    transform: translateY(-50%); 정확히 가운데에 표시 */
+
