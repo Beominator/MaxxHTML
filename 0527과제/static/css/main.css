@@ -6,40 +6,15 @@
 ul{
     list-style-type:none;
 }
-#wrap{
-    width:1000px;
-    margin:0 auto;
-    position:relative;
-
-}
-#top{
-    font-size: 40px;
-}
 .slide_image{
-    width:20%;
+    margin: 0 auto;
 }
-
-#main{
-    width:1000px;
+#foot{
+    float:left;
+    width:300px;
+    height:300px;
 }
-
-#slide{
-    width:20%;
-    position:relative;
-}
-.sub1{
-    background:url(../image/sub1.jpg) no-repeat center;
-    background-size: cover;
-}
-.sub2{
-    background:url(../image/sub2.jpg) no-repeat center;
-    background-size: cover;
-}
-.sub3{
-    background:url(../image/sub3.jpg) no-repeat center;
-}
-
-#tothetop{
+.list{
     position:fixed;
     top:200px;
     left:20px;
