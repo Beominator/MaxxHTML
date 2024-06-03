@@ -204,13 +204,22 @@
         //      모든 값은 정수만 출력
 
         soju = Number(prompt("하루에 몇잔을 마시는가? "));
-        min = 2
-        reduce = soju * min
-        year = 60 * 60 * 24 * 365
+        min = 2;
+        reduce = soju * min;
+       
         document.write("<br> 총 "+reduce+"분 단축되었다. <br>");
         document.write(" 총 "+(reduce/60)+"시간 단축되었다. <br>");
         document.write(" 총 "+(reduce/60/24)+"일 단축되었다.");
+        
+        document.write("<hr>");
+        drink = Number(prompt("몇년간 마셨는가? "));
+        year = 60 * 60 * 24 * 365;
+        answer = drink * year;
+        document.write("<br> 총 "+answer+"분 단축되었다. <br>");
+        document.write(" 총 "+(answer/60)+"시간 단축되었다. <br>");
+        document.write(" 총 "+(answer/60/24)+"일 단축되었다.");
 
+        document.write("<hr>");
         // 과제 2.
         // 두개의 주사위를 던져서 같은 값이 나온다면 당첨, 아니라면 꽝 출력
 
