@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // 과제 1.
+        // 소주 1잔에 수명이 2분 단축된다.
+        // 어떤 사람이 20년동안 소주를 마셨다.
+        // 하루에 몇잔씩 마시는지 입력받기 (prompt로)
+        // 이 사람의 수명은 총 몇 분 단축되었는가?
+        //              총 몇 시간 단축되었는가?
+        //              총 몇 일 단축되었는가?
+        //      모든 값은 정수만 출력
+
+        soju = Number(prompt("하루에 몇잔을 마시는가? "));
+        min = 2;
+        reduce = soju * min;
+       
+        document.write("<br> 총 "+reduce+"분 단축되었다. <br>");
+        document.write(" 총 "+(reduce/60)+"시간 단축되었다. <br>");
+        document.write(" 총 "+(reduce/60/24)+"일 단축되었다.");
+        
+        document.write("<hr>");
+        drink = Number(prompt("몇년간 마셨는가? "));
+        year = 60 * 60 * 24 * 365;
+        answer = drink * year;
+        document.write("<br> 총 "+answer+"분 단축되었다. <br>");
+        document.write(" 총 "+(answer/60)+"시간 단축되었다. <br>");
+        document.write(" 총 "+(answer/60/24)+"일 단축되었다.");
+
+        document.write("<hr>");
+        // 과제 2.
+        // 두개의 주사위를 던져서 같은 값이 나온다면 당첨, 아니라면 꽝 출력
+
+        num1 = Math.floor(Math.random() * 6) + 1;
+        num2 = Math.floor(Math.random() * 6) + 1;
+        result = (num1 == num2 ) ? "당첨" : "꽝";
+        document.write(" <br> 첫번째는 : " + num1+ "<br>");
+        document.write(" 두번째는 : " + num2+ "<br>");
+        document.write(" 결과는 : " + result);
+    </script>
+</body>
+</html>
