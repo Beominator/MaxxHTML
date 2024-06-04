@@ -25,9 +25,10 @@
         document.write(" 총 "+(reduce/60/24)+"일 단축되었다.");
         
         document.write("<hr>");
-        drink = Number(prompt("몇년간 마셨는가? "));
-        year = 60 * 60 * 24 * 365;
-        answer = drink * year;
+        soju = Number(prompt("하루에 몇잔을 마시는가? "));
+        drink = 20;
+        year = 365;
+        answer = (drink * year) * soju * 2;
         document.write("<br> 총 "+answer+"분 단축되었다. <br>");
         document.write(" 총 "+(answer/60)+"시간 단축되었다. <br>");
         document.write(" 총 "+(answer/60/24)+"일 단축되었다.");
