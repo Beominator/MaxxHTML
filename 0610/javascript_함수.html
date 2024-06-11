@@ -73,7 +73,7 @@
         // 전역변수의 선언은 자바스크립트 상단에 선언한다. 주로 let, const
         // let과 var - 재할당 가능 여부
         // let a=10; let a=20; 불가
-        // var b=20; var v=2000; 가능
+        // var b=20; var b=2000; 가능
         // 지역변수는 { } 블록 안에서 생성된 변수이다. 또는 매개변수
         // 지역변수가 생성된 { } 블록 안에서만 사용가능
         // 지역변수는 var, let 사용.
@@ -106,7 +106,7 @@
 function getData( op ){
     var n1 = Number(document.getElementById("num1").value);
     var n2 = Number(document.getElementById("num2").value);
-    var 결과 = null;
+    var 결과 = 0;
     switch( op ){
         case "+": 결과 = n1 + n2;
             break;
@@ -122,31 +122,31 @@ function getData( op ){
 }
 
 
-function plus(){
+// function plus(){
    
-   getData("+");
+//    getData("+");
    
 
     
-   // document.querySelectorAll(".box");    다수의 태그 선택시
-}
+//    // document.querySelectorAll(".box");    다수의 태그 선택시
+// }
 
-function minus(){
+// function minus(){
    
-    getData("-");
+//     getData("-");
     
-}
+// }
 
-function mul(){
-    getData("*");
-}
+// function mul(){
+//     getData("*");
+// }
    
 
-function div(){
-    getData("/");
+// function div(){
+//     getData("/");
 
    
-}
+// }
 
 
     // 단 하나의 함수만 사용해서 만들기
