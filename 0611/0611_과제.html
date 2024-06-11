@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>무작위 숫자 생성기</title>
-    <style>
-        #output {
-            margin-top: 20px;
-            font-size: 20px;
-        }
-    </style>
+    <title>Random Numbers</title>
 </head>
 <body>
-    <button onclick="generateNumbers()">숫자 생성</button>
-    <div id="output"></div>
+    <button onclick="showRandomNumbers()">랜덤 숫자 보기</button>
+    <div id="randomNumbers"></div>
 
     <script>
-        function generateNumbers() {
-            var outputDiv = document.getElementById("output");
-            outputDiv.innerHTML = '';
-
-            for (var i = 0; i < 5; i++) {
-                var line = '';
-                for (var j = 0; j < 4; j++) {
-                    line += Math.floor(Math.random() * 50) + 1 + ' ';
+        function generateRandomNumbers() {
+            let numbers = [];
+            while (numbers.length < 20) {
+                let random = Math.floor(Math.random() * 50) + 1;
+                if (!numbers.includes(random)) {
+                    numbers.push(random);
                 }
-                outputDiv.innerHTML += line + '<br>';
             }
+            return numbers;
+        }
+
+        function displayNumbers(numbers) {
+            let output = '';
+            for (let i = 0; i < numbers.length; i++) {
+                output += numbers[i] + ' ';
+                if ((i + 1) % 4 === 0) {
+                    output += '<br>';
+                }
+            }
+            document.getElementById('randomNumbers').innerHTML = output;
+        }
+
+        function showRandomNumbers() {
+            let randomNumbers = generateRandomNumbers();
+            displayNumbers(randomNumbers);
         }
     </script>
 </body>
