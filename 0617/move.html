@@ -39,6 +39,7 @@ let x = 0, y = 0;
             for(var k=0; k<board[i].length; k++){
                 var tdClass='wall';
                 if( board[i][k] == 0) tdClass="blank";
+                
                 if( board[i][k] == 2) {
                    tdClass="me"; 
                    y = i;
@@ -59,29 +60,34 @@ let x = 0, y = 0;
 $(document).keyup(function( event ){
     // w : 87, a : 65, s: 83 d : 68
     var key = event.keyCode ;
+    // let newX = x, newY = y;
     // alert( typeof key);             // 타입이 불분명할 때는 반드시 확인해보기.
+        var stepx = x, stepy = y;       // 이동할 위치 표현변수
+        board[y][x]=0;
+            $("td").eq(y*21+x).removeClass("me");   // 현재 위치에 클래스명 blank로 변경
+            
+            $("td").eq(y*21+x).addClass("blank");   // 이동할 위치에 클래스명 me로 변경
     switch(key){                 // 4가지 말고 다른 선택지가 없으므로 
-        case 87:
-            board[y][x]=0;
-            $("td").eq(y*21+x).removeClass("me");
-            $("td").eq(y*21+x).addClass("blank");
-            y--;
+        case 87:    stepy--;    break;
+        case 65:    stepx--;    break;
+        case 83:    stepy++;    break;
+        case 68:    stepx++;    break;
+    } 
+    if( board[stepy][stepx] != 1){
+        x = stepx;
+        y = stepy;
+    }
             board[y][x]=2;
             $("td").eq(y*21+x).removeClass("blank");
-            $("td").eq(y*21+x).addClass("me");     
-            // 현재 위치에 클래스명 blank로 변경
-            // 이동할 위치에 클래스명 me로 변경
-            break;
-        case 65:
-
-            break;
-        case 83:
-
-            break;
-        case 68:
-
-            break;
-    }           
+            $("td").eq(y*21+x).addClass("me");
+            //     if (board[newY][newX] != 1) {
+            //     board[y][x] = 0;
+            //     $("td").eq(y * 21 + x).removeClass("me").addClass("blank");
+            //     y = newY;
+            //     x = newX;
+            //     board[y][x] = 2;
+            //     $("td").eq(y * 21 + x).removeClass("blank").addClass("me");
+            // }          
 });
 // 벽에 도달하면 더이상 이동 못하게
 </script>
