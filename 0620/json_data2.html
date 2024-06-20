@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        /*
+        
+        자바스크립트 객체
+        객체는 데이터(속성)과 함수(기능)으로 구성되어있다.
+        내장 객체로는 Array, Math, Number, Document, Window 등등...
+        사용자 정의 객체
+        { name : "이순신", age:19 }     // 리터럴 객체
+        function book( title, aut, pyear){      // 생성자 함수로 객체 생성
+            this.title = title;
+            this.aut = aut;
+            this.저자 = pyear;
+        }
+        자바스크립트에서 객체는 key : value의 구조로 속성(데이터)을 정의한다.
+        key는 중복되면 안된다. 이름, 문자열, 숫자로 키를 정의할 수 있다.
+        변수이름 처럼 이름으로 정의하는게 좋다.
+        value는 중복가능, 숫자, 문자열, 배열, 객체, 함수
+
+        let people = { name : "이순신", age:19 };
+        people.name -> 이순신
+        people.age -> 19
+        people[name] -> 이순신
+        people[age] -> 19
+
+        json - javascript object notation
+        웹에서 사용할 데이터를 경량으로 표현하기 위해 사용한다.
+        자바스크립트에서 객체를 문자열로 변환 시켜준 것이다.
+
+        let people = { name : "이순신", age:19 };
+
+        people을 json으로 변환하면
+        "{ "name" : "이순신", "age":19 }"
+        객체를 json으로 변환하는 방법은     JSON.stringify( people );
+
+        json을 객체로 변환하는 방법은 JSON.parse( json값 );
+        
+        */
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
