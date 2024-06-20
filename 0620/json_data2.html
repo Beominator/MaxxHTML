@@ -47,10 +47,107 @@
         
         */
 
+        // 종량제봉투.json
+        // 종량제봉투판매소정보 key이고, value에 배열의 구조로 실제 필요한 객체들이 있다.
+
+        $(function(){       // window.onload
+            const xml = new XMLHttpRequest();
+            xml.onload=function(){      // json파일 모두 열기 되면 실행
+            var data = this.responseText;       // json파일의 내용을 가져와서 data에 저장, 문자열로 저장되어있다.
+            data = JSON.parse(data);    // json을 자바스크립트 객체로 변환하여 data에 저장.
+            console.log(data.종량제봉투판매소정보);
+            output( data.종량제봉투판매소정보 );
+        }
+        xml.open( 'GET', '종량제봉투.json');     // 받기
+        xml.send();     // 보내기
+
+        $("#search").on('keyup', search );
+
+        });
+
+
+        function search(){      // search함수에서 this는 input#search 이다.
+            var value = $(this).val();  // input 태그 입력 값 가져오기
+            $("#dataField tr").filter( function(){
+                $(this).toggle( $(this).text().indexOf( value )!= -1);
+            } );
+            // .toggle( false ) - hide() 동작, .toggle( true ) - show() 동작.
+            
+        }
+
+       function output( data ){
+        // data 매개변수는 배열이다. 배열안엔 객체들이있다.
+        for(var i=0; i<data.length; i++){
+        //    if(data[i].동선택 === '부강면'){
+            $("#dataField").append(`
+            <tr>
+                <td>${ data[i].동선택 }</td>      
+                <td>${ data[i].지정판매소명 }</td>
+                <td>${ data[i]['도로명 주소'] }</td>        // 띄어쓰기 있을 때는 대괄호로 묶고 key 이름을 ''로 묶기
+                <td>${ data[i]['판매소 전화번호'] }</td>
+
+            </tr>
+            `);
+       // }
+        }
+       }
+
+
+
     </script>
 
 </head>
 <body>
-    
+    <div id="wrap">
+        <div class="inputBox">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+        </div>
+        <div id="dataList">
+            <table id="dataTable">
+                <thead class="dataHead">
+                    <tr>
+                        <th class="동">동</th>
+                        <th class="판매소명">판매소명</th>
+                        <th class="주소">주소</th>
+                        <th class="전화번호">전화번호</th>
+                    </tr>
+                </thead>
+                <tbody id="dataField"></tbody>
+            </table>
+        </div>
+    </div>
+<style>
+    #wrap{
+        width:1000px;
+        margin:50px auto;
+    }
+    .inputBox{
+        padding:10px 0;
+    }
+    #search{
+        width:300px;
+        font-size:25px;
+        padding:10px;
+        border:2px solid #aaa;
+        border-radius:10px;
+    }
+    #dataList{
+        padding:15px 0;
+        border-top:1px solid #aaa;
+    }
+    #dataTable{
+        width:100%;
+        border-collapse: collapse;
+    }
+    .동{width:15%;}
+    .판매소명{ width: 35%;}
+    .주소{width:30%;}
+    .전화번호{width:20%;}
+    #dataField td{
+        line-height:40px;
+        font-size:18px;
+        text-align:center;
+    }
+</style>
 </body>
 </html>
