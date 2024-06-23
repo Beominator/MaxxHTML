@@ -148,7 +148,7 @@ window.onload = function () {
     }
 
     // 게임 시작
-    function startGame() {
+    function startGame() {          // 게임 스타트
         const catDeck = catCard();
         shuffleArray(catDeck);
         renderBoard(catDeck);
