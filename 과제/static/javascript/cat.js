@@ -104,9 +104,10 @@ window.onload = function () {
 
                 if (matches === boardSize / 2) {
                     if (stage < TOTAL_STAGE) {
+                        alert('축하합니다. 다음 스테이지로 넘어갑니다!');
                         stage += 1; //다음 스테이지로 이동
                         boardSize += 6; //각 스테이지마다 카드 수를 6장씩 증가
-                        setTimeout(nextStage, 3000); //3초 후에 다음 스테이지로 이동
+                        setTimeout(nextStage, 3000); // 3초 후에 다음 스테이지로 이동
                     } else {
                         alert('모든 스테이지 클리어!!');
                         resetGame();
@@ -173,7 +174,7 @@ window.onload = function () {
         startGame();
     }
 
-    document.getElementById('start').onclick = startGame;
+    // document.getElementById('start').onclick = startGame;
 
 
 };
