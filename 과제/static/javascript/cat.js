@@ -11,7 +11,7 @@ window.onload = function () {
     let stage = 1; // 현재 스테이지
     let boardSize = BOARD_SIZE; // 현재 스테이지의 카드 수
 
-    // 점수 업데이트
+    // 점수 업데이트        내부함수 - 단 하나의 외부함수라도 참여할 시 오류가 날 수 있다.
     function updateScore() {
         document.getElementById('score').textContent = `SCORE : ${score}`;
     }
