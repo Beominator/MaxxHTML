@@ -35,9 +35,12 @@ img{ width:100%; }
     width:25%;
     padding:10px;
     height:250px;
+    display:flex;
+    align-items:center;
 }
 .itemHide{
     background:#aaa;
+    width:100%;
     height:100%;
 }
 .select{
