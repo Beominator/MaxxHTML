@@ -20,11 +20,11 @@ $(function(){
         let user = JSON.parse( localStorage.getItem("user") );
         
         // 아이디 일치?
-        if (id.val() == user.id ){
+        if (id.val() === user.id ){
             // 아이디가 일치한다면 비밀번호는 일치?
-            if(pw.val() == user.pw){
+            if(pw.val() === user.pw){
                 // 아이디와 비밀번호가 일치한다면 로그인처리
-                $("#member").html(`<b>${user.id}</b>
+                $(".member").html(`<b>${user.id}</b>
                 <a href="javascript:window.location.reload()">
                 로그아웃 </a>
                 `);
