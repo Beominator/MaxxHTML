@@ -1,0 +1,78 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+#name{
+    width:500px;
+    font-size:40px;
+    margin:0 auto;
+    padding:30px;
+    justify-content: center;
+    
+}
+#wrap{
+    justify-content: center;
+    padding:30px;
+}
+
+.menuList{
+    padding:10px;
+    
+}
+.menuList p{
+    cursor: pointer;
+    font-size:20px;
+    font-weight:700;
+}
+#home_list1{
+    flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    display:inline-block;
+    width:800px;
+}
+#home_list2{
+    flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    display:inline-block;
+    width:800px;
+}
+#home_list3{
+    flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    display:inline-block;
+    width:800px;
+}
+#home_list4{
+    flex-direction:column;
+    display:flex;
+    flex-wrap:wrap;
+    display:inline-block;
+    width:800px;
+}
+
+.item{
+    width: 20%;
+    height:250px;
+    border:1px solid black;
+    background:rgb(109, 97, 238);
+    padding:20px;
+    display:inline-block;
+    
+}
+#home_pay .money{
+    position:relative;
+    font-size:20px;
+    list-style-type: none;
+    display:flex;
+    align-items:center;
+}
+
+input{
+    text-align: end;
+    font-size:30px;
+    border:2px solid rgb(109, 97, 238);
+}

@@ -1,0 +1,21 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+#name{
+    width:500px;
+    font-size:40px;
+    margin:0 auto;
+    padding:30px;
+    justify-content: center;
+    
+}
+#wrap{
+    justify-content: center;
+    padding:30px;
+}
+#detail_img{
+    width:500px;
+    height:300px;
+}
