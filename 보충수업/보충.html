@@ -182,18 +182,18 @@
 
             */
 
-            dart = 15;
-            if(dart>=15){
-                document.write("드론 획득");
-            }else if(dart>=9){
-                document.write("큰인형 획득");
-            }else if (dart>=5){
-                document.write("작은인형 획득");
-            }else if(dart==3){
-                document.write("열쇠고리 획득");
-            }else{
-                document.write("실패");
-            }
+            // dart = 15;
+            // if(dart>=15){
+            //     document.write("드론 획득");
+            // }else if(dart>=9){
+            //     document.write("큰인형 획득");
+            // }else if (dart>=5){
+            //     document.write("작은인형 획득");
+            // }else if(dart==3){
+            //     document.write("열쇠고리 획득");
+            // }else{
+            //     document.write("실패");
+            // }
 
 /*
 
@@ -203,8 +203,42 @@
     하지만 주사위 세개가 모두 6이라면 무조건 이긴다.
     그리고 주사위 두개가 3이라면 세개가 6일 경우보다는 약하지만 두번째로 이길 수 있는 값이다.
     
+    
 
 */
+    
+    
+    
+    yjDice1 = Math.floor(Math.random()*6)+1;
+    kjDice1 = Math.floor(Math.random()*6)+1;
+    yjDice2 = Math.floor(Math.random()*6)+1;
+    kjDice2 = Math.floor(Math.random()*6)+1;
+    yjDice3 = Math.floor(Math.random()*6)+1;
+    kjDice3 = Math.floor(Math.random()*6)+1;
+
+    yjDice = yjDice1+yjDice2+yjDice3;
+    kjDice = kjDice1+kjDice1+kjDice1;
+    
+    document.write("영진의 주사위는? " + yjDice1 + " , " + yjDice2 + " , " + yjDice3 + "합계는? " + yjDice + "<br>");
+    document.write("경제의 주사위는? " + kjDice1 + " , " + kjDice2 + " , " + kjDice3 + "합계는? " + kjDice + "<br>");
+    
+    if ((yjDice1 == 6) && (yjDice2 == 6) && (yjDice3 == 6)) {
+        document.write("영진 승!");
+    } else if ((kjDice1 == 6) && (kjDice2 == 6) && (kjDice3 == 6)) {
+        document.write("경제 승!");
+    } else if ((yjDice1 == 3 && yjDice2 == 3) || (yjDice2 == 3 && yjDice3 == 3) || (yjDice1 == 3 && yjDice3 == 3)) {
+        document.write("영진 승!");
+    } else if ((kjDice1 == 3 && kjDice2 == 3) || (kjDice2 == 3 && kjDice3 == 3) || (kjDice1 == 3 && kjDice3 == 3)) {
+        document.write("경제 승!");
+    } else if (yjDice < kjDice) {
+        document.write("영진 승!");
+    } else if (yjDice > kjDice) {
+        document.write("경제 승리!");
+    } else {
+        document.write("무승부");
+    }
+
+
 </script>
   
 
